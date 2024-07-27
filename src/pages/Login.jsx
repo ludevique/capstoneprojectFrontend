@@ -13,7 +13,7 @@ const Login = () => {
 
     //display what we want to see on our browser
   return (
-    <div>
+    <div className='login'>
         <h1>Login</h1>
         <form onSubmit={handleLogin}>
             <label>

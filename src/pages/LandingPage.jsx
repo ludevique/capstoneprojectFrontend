@@ -6,9 +6,9 @@ const LandingPage = () => {
   return (
     <div>
         <h1>STUDY CENTER APPLICATION</h1>
-        <Link to='/login'>Login</Link>
-        <Link to='/'>Courses</Link>
-        <Link to='/profile'></Link>
+        {/* <Link to='/login'>Login</Link> */}
+        {/* <Link to='/courses'>Courses</Link> */}
+        {/* <Link to='/profile'></Link> */}
     </div>
   )
 }
