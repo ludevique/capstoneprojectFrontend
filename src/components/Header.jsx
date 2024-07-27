@@ -5,6 +5,7 @@ const Header = () => {
     <header>
         <nav className='navbar'>
             <Link to='/'>home</Link>
+            <Link to='/register'>Register</Link>
             <Link to='/courses'>Courses</Link>
             <Link to='/login'>Login</Link>
         </nav>  

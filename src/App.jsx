@@ -4,6 +4,7 @@ import LandingPage from './pages/LandingPage'
 import Login from './pages/Login'
 import CoursePage from './pages/CoursePage'
 import Header from './components/Header'
+import RegisterPage from './pages/RegisterPage'
 
 function App() {
   
