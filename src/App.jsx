@@ -1,10 +1,10 @@
 import './App.css'
 import {Route, Routes} from 'react-router-dom'
-import LandingPage from './pages/LandingPage'
-import Login from './pages/Login'
-import CoursePage from './pages/CoursePage'
+import LandingPage from './components/LandingPage'
+import Login from './components/Login'
+import CoursePage from './components/CoursePage'
 import Header from './components/Header'
-import RegisterPage from './pages/RegisterPage'
+import RegisterPage from './components/RegisterPage'
 
 
 function App() {
