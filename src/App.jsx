@@ -6,6 +6,7 @@ import CoursePage from './pages/CoursePage'
 import Header from './components/Header'
 import RegisterPage from './pages/RegisterPage'
 
+
 function App() {
   
 

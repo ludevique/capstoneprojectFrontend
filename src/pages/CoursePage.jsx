@@ -22,11 +22,27 @@ const CoursePage = () => {
       myData();
     }, [])
 
-  return (
+    //contain to be display with logic,
+    
+  return ( 
     <div>
-        <Link to='/course'>
-            <h1>COURSES MATERIALS</h1>
-        </Link>
+        <h1>COURSES MATERIALS</h1>
+        <div className="course-list">
+        {/* using the map() to render the data in my database */}
+            {courses.map(course => (
+              <div key={course._id} className='course-item'>
+                <h2>{course.name}</h2>
+                <p>{course.Description}</p>
+                <iframe
+                    width="570"
+                    height="315"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture "
+                    allowFullScreen
+                    src={course.url}
+                    title={course.name}></iframe>
+              </div>
+            ))}
+        </div>
     </div>
   )
 }
