@@ -1,15 +1,34 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { useState } from 'react'
+import {Link, NavLink} from 'react-router-dom'
+import './header.css'
 const Header = () => {
+
+  const [navbar, setNavbar] = useState(false)
   return (
-    <header>
-        <nav className='navbar'>
-            <Link to='/'>home</Link>
-            <Link to='/register'>Register</Link>
-            <Link to='/courses'>Courses</Link>
-            <Link to='/login'>Login</Link>
+    
+        <nav>
+          <Link to='/' className='navbar'>
+            home
+          </Link>
+          <div className="menu">
+            <span></span>
+            <span></span>
+            <span></span>  
+          </div> 
+          <ul className={navbar ? 'open': ''}>
+            <li>
+                <NavLink to='/register'>Register</NavLink>
+            </li>
+            <li>
+                <NavLink to='/courses'>Courses</NavLink>
+            </li>
+            <li>
+                <NavLink to='/login'>Login</NavLink>
+            </li>
+          </ul>    
         </nav>  
-    </header>
+    
     
   )
 }

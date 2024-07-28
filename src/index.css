@@ -1,32 +1,6 @@
 *{
-  background-color: cyan;
-  text-align: center;
-}
-
-
-
- Header {
-  background:#333;
-  display: flex;
-  justify-content:space-evenly;
-  padding: 10px 0;
-  color: #fff;
-} 
-.navbar{
-  /*background-color: blanchedalmond;*/
-  display: flex;
-  flex-direction: row;
-}
-
-.login{
-  text-align: center;
-  font-family: 'Courier New', Courier, monospace;
-  margin-top: 200px;
-  border: 2px solid;
-  height: 300px;
-  width: 500px;
-  margin-left: 50%;
-  margin-right: 50%;
-
-
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
