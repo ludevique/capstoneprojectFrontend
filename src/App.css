@@ -1,6 +1,70 @@
 .App{
-    background-color: #fefefe;
+    background-color: purple;
     height: 100%;
     width: 100%;
+}
+
+.intro {
+    border:none;
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+    border-color: #fefefe;
+    width: 600px;
+    padding: 55px;
+    margin-left: 60%;
+}
+
+.about {
+    border: 1px solid;
+    text-align: center;
+    height: 200px;
+    width: 500px;
+    border-radius: 10px;
+    border-color: none;
+    font-weight: bold;
+    background-color:whitesmoke;
+    margin-top: 40px;
+    /*margin-left: 50%;*/    
+}
+
+.mission{
+    border: 1px solid;
+    text-align: center;
+    height: 200px;
+    width: 500px;
+    border-radius: 10px;
+    border-color:none;
+    font-weight: bold;
+    background-color: whitesmoke;
+    margin-top: 40px;
+   /* margin-left: 50%;*/
+}
+
+.focus {
+    border: 1px solid;
+    text-align: center;
+    height: 500px;
+    width: 500px;
+    border-radius: 10px;
+    border-color: antiquewhite;
+    font-weight: bold;
+    background-color: whitesmoke;
+    /*margin-left: 50%;*/   
+}
+
+.focus p ul li {
+    list-style: none;
+}
+
+.container {
+    display: flex;
+    
+}
+
+.image {
+    display: flex;
+    justify-content: flex-start;
+    justify-self: flex-start;
 }
 
