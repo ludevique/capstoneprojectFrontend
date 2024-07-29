@@ -10,7 +10,7 @@ const CoursePage = () => {
     useEffect(() => {
       const myData = async () => {
         try {
-          const result = await axios.get('/course');
+          const result = await axios.get('http://localhost:3000/catalog');
           //
           setCourses(result.data)
           

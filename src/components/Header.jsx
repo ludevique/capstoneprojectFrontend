@@ -21,7 +21,7 @@ const Header = () => {
                 <NavLink to='/register'>Register</NavLink>
             </li>
             <li>
-                <NavLink to='/courses'>Courses</NavLink>
+                <NavLink to='/course'>Courses</NavLink>
             </li>
             <li>
                 <NavLink to='/login'>Login</NavLink>
