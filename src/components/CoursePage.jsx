@@ -44,7 +44,7 @@ const CoursePage = () => {
       e.preventDefault();
 
       try {
-        const updateCourse = await axios.put(`http://localhost:3000/catalog/${editingcourse._id}`, {...editingcourse, Description:description});
+        const updateCourse = await axios.put(`http://localhost:3000/front/catalog/${editingcourse._id}`, {...editingcourse, Description:description});
 
         //logic to update a description course
         setCourses(courses.map(course => course._id === editingcourse._id ? updateCourse.data:course));
@@ -61,7 +61,7 @@ const CoursePage = () => {
     //function delete course
     const handleDelete = async (id) => {
       try {
-        await axios.delete(`http://localhost:3000/courses/${id}`);
+        await axios.delete(`http://localhost:3000/front/catalog/${id}`);
         setCourses(courses.filter(course => course._id !== id));
 
       } catch (err) {
@@ -75,7 +75,7 @@ const CoursePage = () => {
     const handleCreate = async (e) => {
       e.preventDefault()
       try {
-        const myCourse = await axios.post(`http://localhost:3000/courses`, newCourse)
+        const myCourse = await axios.post(`http://localhost:3000front/catalog/`, newCourse)
         setNewCourse([...courses, myCourse.data]);
         setNewCourse({name:'', Description:'', url:''});
 

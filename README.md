@@ -23,5 +23,16 @@ Axios for making HTTP requests to the backend API
 React Router: for navigating between pages in the application.
 
 
+BACKEND
+https://github.com/ludevique/CapstoneProjectBackend.git
+
+Tecnhologies Used
+
+Mongoose
+MongoDB
+Axios
+
+
+
 
 
