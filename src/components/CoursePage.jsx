@@ -44,10 +44,10 @@ const CoursePage = () => {
       e.preventDefault();
 
       try {
-        const updateCourse = await axios.put(`http://localhost:3000/courses/${editingcourse._id}`, {...editingcourse, Description:description});
+        const updateCourse = await axios.put(`http://localhost:3000/catalog/${editingcourse._id}`, {...editingcourse, Description:description});
 
         //logic to update a description course
-        setCourses(courses.map(course => course._id === editingcourse._id ? updateCourse.data:course));
+        setCourses(courses.map(course => courses._id === editingcourse._id ? updateCourse.data:course));
 
         //calling the function to close the edit form
         setEditingCourse(null)
@@ -97,11 +97,11 @@ const CoursePage = () => {
   return ( 
     <div>
         <form onSubmit={handleCreate }>
-          <labe>
+          <label>
             Name:
             <input type='text' value={newCourse.name} onChange={(e) => setNewCourse({...newCourse, Description: e.target.value})} required
             />
-          </labe>
+          </label>
 
           <br/>
           <label>
@@ -148,7 +148,7 @@ const CoursePage = () => {
               {/*condition for updating a course */}
               {editingcourse && editingcourse._id === course._id && (
                 <form onSubmit={handleUpdate}>
-                  <textarea value={description} onChange={setDescription(e.target.value)} required/>
+                  <textarea value={description} onChange={(e) =>setDescription(e.target.value)} required/>
 
                 <button type='submit'>Save</button>
                 <button type='button' onClick={() =>setEditingCourse(null)}>Cancel</button>
