@@ -47,7 +47,7 @@ const CoursePage = () => {
         const updateCourse = await axios.put(`http://localhost:3000/catalog/${editingcourse._id}`, {...editingcourse, Description:description});
 
         //logic to update a description course
-        setCourses(courses.map(course => courses._id === editingcourse._id ? updateCourse.data:course));
+        setCourses(courses.map(course => course._id === editingcourse._id ? updateCourse.data:course));
 
         //calling the function to close the edit form
         setEditingCourse(null)

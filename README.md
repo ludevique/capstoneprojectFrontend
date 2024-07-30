@@ -1,8 +1,27 @@
-# React + Vite
+Study Center Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Overview
 
-Currently, two official plugins are available:
+Welcome to the study center web application! this app is built using React to facilitate a user experience for managing courses. Our application allows users to creat, update, read and delete courses through a user-friendly interface. This is designed to work with a backend service that manages the actual data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features
+
+Create Course material.
+Update Courses: modify existing course details.
+Delete Courses: remove courses from the system.
+Backend Integration: Communicates with a backend service to persist data.
+
+
+Technologies Used
+
+React: a Javascript library for building user interfaces.
+
+React hooks: usestate for managing  and useeffect for handling side effects.
+
+Axios for making HTTP requests to the backend API
+
+React Router: for navigating between pages in the application.
+
+
+
+
