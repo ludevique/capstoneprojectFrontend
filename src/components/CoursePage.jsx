@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react'
 //-----------------import axios that will help me to get my data----------
 import axios from 'axios'
 
-
+//----------------------------------------------------------------------------------------------------------------------------------------------
+ //setting all what i will need to manage my data and make sure i will have my CRUP operation at the end in my browser
 const CoursePage = () => {
     const [courses, setCourses] = useState([]);
     const [editingcourse, setEditingCourse] = useState(null)
@@ -84,10 +85,14 @@ const CoursePage = () => {
       }
     };
 
+    //------conditional statement for checking either a succes or a failure--------------------------
+    if (loading) return <p>course is loading...</p>
+    if (error) return <p>{error}</p>
+
     //---------------------------------------------------------------------------------------------------------------------------------------------
        //here we are going to make a form that allow to "create a new course" and render our data also
     //---------------------------------------------------------------------------------------------------------------------------------------------
-    //contain to be display with logic,
+    
     
   return ( 
     <div>
@@ -130,12 +135,30 @@ const CoursePage = () => {
                     allowFullScreen
                     src={course.url}
                     title={course.name}>
-                    </iframe>
-              </div>
+                </iframe>
+
+                <button onClick={()=> handleEdit(course)}>
+                  Edit-Description
+                </button>
+                <button onClick={()=> handleDelete(course._id)}>
+                  Delete-course
+                </button>
+             
+
+              {/*condition for updating a course */}
+              {editingcourse && editingcourse._id === course._id && (
+                <form onSubmit={handleUpdate}>
+                  <textarea value={description} onChange={setDescription(e.target.value)} required/>
+
+                <button type='submit'>Save</button>
+                <button type='button' onClick={() =>setEditingCourse(null)}>Cancel</button>
+                </form>
+              )};
+             </div>
             )) : <p>this is loading</p>}
         </div>
     </div>
-  )
-}
+  );
+};
 
 export default CoursePage
