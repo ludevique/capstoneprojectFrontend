@@ -68,3 +68,117 @@
     justify-self: flex-start;
 }
 
+/* course page  style*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  div {
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+  }
+
+  .course-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
+    padding: 0;
+    margin: 0;
+  }
+  
+  .course-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .course-item h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #007bff;
+  }
+
+  .course-item p {
+    font-size: 1em;
+    color: #666;
+    margin: 10px 0;
+  }
+  
+  .course-item iframe {
+    width: 100%;
+    height: auto; 
+    border: none;
+    border-radius: 4px;
+  }
+  
+  /* Responsive layout adjustments */
+  @media (max-width: 1200px) {
+    .course-list {
+      grid-template-columns: repeat(3, 1fr); 
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .course-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .course-list {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+
+
+  .login{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login.h1{
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+.login label{
+    display: block;
+    margin: 10px 0;
+}
+
+.login button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login button:hover{
+    background-color: #0056b3;
+}
+
+
+  
