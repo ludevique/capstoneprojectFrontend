@@ -75,9 +75,10 @@ const CoursePage = () => {
     const handleCreate = async (e) => {
       e.preventDefault()
       try {
-        const myCourse = await axios.post(`http://localhost:3000front/catalog/`, newCourse)
+        const myCourse = await axios.post(`http://localhost:3000/front/catalog/`, newCourse)
         setNewCourse([...courses, myCourse.data]);
         setNewCourse({name:'', Description:'', url:''});
+        // console.log(myCourse)
 
       } catch (error) {
         console.error("can't create a new course", error)
@@ -99,7 +100,7 @@ const CoursePage = () => {
         <form onSubmit={handleCreate }>
           <label>
             Name:
-            <input type='text' value={newCourse.name} onChange={(e) => setNewCourse({...newCourse, Description: e.target.value})} required
+            <input type='text' value={newCourse.name} onChange={(e) => setNewCourse({...newCourse, name: e.target.value})} required
             />
           </label>
 
